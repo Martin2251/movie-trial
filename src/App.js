@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
+import Movie from "./components/Movie";
 
 import "./App.css";
 
-const App = () => {
-[movie, setMovies] = useState([]);
-];
+function App() {
+  return <div>Hello</div>;
+}
 
 export default App;
