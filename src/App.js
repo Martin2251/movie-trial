@@ -1,14 +1,14 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Movie from "./components/Movie";
 
 import "./App.css";
 
 function App() {
-  const movies = ["1", "2", "3"];
+  const movies = ["movie1", "movie2"];
   return (
     <div>
       {movies.map((movie) => (
-        <Movie />
+        <Movie movie={movie} />
       ))}
     </div>
   );
