@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Movie from "./components/Movie";
+import MovieList from "./components/MovieList";
 
 import "./App.css";
 
@@ -86,7 +86,11 @@ const App = () => {
         "https://m.media-amazon.com/images/M/MV5BMDljNTQ5ODItZmQwMy00M2ExLTljOTQtZTVjNGE2NTg0NGIxXkEyXkFqcGdeQXVyODkzNTgxMDg@._V1_SX300.jpg",
     },
   ]);
-  return <div>HELLO</div>;
+  return (
+    <div>
+      <MovieList movies={movies} />
+    </div>
+  );
 };
 
 export default App;
