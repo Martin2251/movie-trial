@@ -87,7 +87,7 @@ const App = () => {
     },
   ]);
   return (
-    <div>
+    <div className="movie-show">
       <MovieList movies={movies} />
     </div>
   );
