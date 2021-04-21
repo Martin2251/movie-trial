@@ -36,7 +36,7 @@ const App = () => {
   };
   return (
     <div>
-      <div>
+      <div className="search-cont">
         <MovieListHeading heading=" Martin React Movie API" />
         <SearchBox value={searchValue} onChange={setSearchValue} />
         <Button onClickHandler={getMovieRequest} label="Search"></Button>

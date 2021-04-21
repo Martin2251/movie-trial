@@ -28,6 +28,11 @@ body {
   margin: 5px;
   flex-wrap: wrap;
   flex-direction: row;
+  padding: 10px;
+}
+
+.search-cont {
+  align-items: center;
 }
 .button {
   background-color: #e67e22; /* Green */
@@ -35,11 +40,12 @@ body {
   border-radius: 4px;
   color: white;
   padding: 10px 24px;
-  text-align: center;
+  text-align: right;
   text-decoration: none;
   font-size: 12px;
   box-shadow: 3em;
-  align-items: flex-start;
+  align-items: right;
+  margin-left: 7.5%;
 }
 
 .button:hover {
