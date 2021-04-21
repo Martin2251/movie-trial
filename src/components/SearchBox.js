@@ -2,7 +2,7 @@ import React from "react";
 
 const SearchBox = (props) => {
   return (
-    <div className>
+    <div className="search-form">
       <input
         value={props.value}
         onChange={(event) => props.onChange(event.target.value)}

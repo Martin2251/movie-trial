@@ -11,6 +11,11 @@ body {
   font-family: "Noto Sans HK", sans-serif;
 }
 
+.heading {
+  text-align: center;
+  color: #ffff;
+}
+
 .movie-show > .row {
   overflow-x: auto;
   flex-wrap: nowrap;
@@ -24,10 +29,28 @@ body {
   flex-wrap: wrap;
   flex-direction: row;
 }
+.button {
+  background-color: #e67e22; /* Green */
+  border: none;
+  border-radius: 4px;
+  color: white;
+  padding: 10px 24px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 12px;
+  box-shadow: 3em;
+}
 
-button {
-  color: coral;
-  fill: blue;
+.button:hover {
+  background-color: #d35400;
+  cursor: pointer;
+}
+
+.search-form {
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+  padding: 10px 24px;
 }
 
 .image-container {
@@ -42,4 +65,10 @@ button {
 
 .image-container:hover .overlay {
   opacity: 1;
+}
+
+@media (max-width: 800px) {
+  .movie-show {
+    flex-direction: column;
+  }
 }
