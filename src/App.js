@@ -37,7 +37,7 @@ const App = () => {
   return (
     <div>
       <div>
-        <MovieListHeading heading="Movies" />
+        <MovieListHeading heading=" Martin React Movie API" />
         <SearchBox value={searchValue} onChange={setSearchValue} />
         <Button onClickHandler={getMovieRequest} label="Search"></Button>
       </div>
