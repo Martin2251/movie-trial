@@ -31,9 +31,6 @@ body {
   padding: 10px;
 }
 
-.search-cont {
-  align-items: center;
-}
 .button {
   background-color: #e67e22; /* Green */
   border: none;
@@ -73,8 +70,10 @@ body {
 }
 
 .search-form {
-  align-items: center;
-  padding: 10px 24px;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-top: 10px;
 }
 
 .image-container {
