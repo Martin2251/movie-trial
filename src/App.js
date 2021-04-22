@@ -4,6 +4,7 @@ import MovieListHeading from "./components/MovieListHeading";
 import "./App.css";
 import SearchBox from "./components/SearchBox";
 import Button from "./components/Button";
+import ClearButton from "./components/ClearButton";
 
 const App = () => {
   const [movies, setMovies] = useState([]);
@@ -44,7 +45,7 @@ const App = () => {
       <div className="movie-show">
         <MovieList movies={movies} />
       </div>
-      <Button onClickHandler={resetAll} label="Clear All"></Button>
+      <ClearButton onClickHandler={resetAll} label="Clear All"></ClearButton>
     </div>
   );
 };
