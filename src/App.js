@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import MovieList from "./components/MovieList";
 import MovieListHeading from "./components/MovieListHeading";
 import "./App.css";
@@ -11,6 +11,15 @@ const App = () => {
 
   // will trigger only ONCE when user lands on the page
 
+  useEffect(async () => {
+    const url = "http://www.omdbapi.com/?s=godfather&apikey=24885019";
+
+    const response = await fetch(url);
+    const responseJson = await response.json();
+
+    setMovies(responseJson.Search);
+  }, []);
+
   const getMovieRequest = async () => {
     const url = `http://www.omdbapi.com/?s=${searchValue}&apikey=24885019`;
 
@@ -19,8 +28,6 @@ const App = () => {
 
     // update the state
     setMovies(responseJson.Search);
-
-    console.log(responseJson);
   };
   const resetAll = () => {
     setMovies([]);
