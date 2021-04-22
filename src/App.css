@@ -74,6 +74,10 @@ body {
   flex-direction: column;
   justify-content: flex-start;
   margin-top: 10px;
+  padding: 10px 24px;
+  align-items: flex-start;
+  height: 50px;
+  width: 45px;
 }
 
 .image-container {
