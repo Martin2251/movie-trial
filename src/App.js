@@ -10,6 +10,16 @@ import ReactPaginate from "react-paginate";
 const App = () => {
   const [movies, setMovies] = useState([]);
   const [searchValue, setSearchValue] = useState("");
+  const [pageNumber, setPageNumber] = useState(0);
+  // create logic for pagination
+  const moviesPerPage = 10;
+  const pagesVisited = pageNumber * moviesPerPage;
+
+  const displayMovies = movies
+    .slice(pagesVisited, pagesVisited + moviesPerPage)
+    .map((movies) => {
+      return;
+    });
 
   // will trigger only ONCE when user lands on the page
 
