@@ -88,6 +88,8 @@ body {
 .image-container {
   position: relative;
   transition: transform 0.2s;
+  border-color: #ffff;
+  border-style: solid;
 }
 
 .image-container:hover {
