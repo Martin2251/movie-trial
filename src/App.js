@@ -5,6 +5,7 @@ import "./App.css";
 import SearchBox from "./components/SearchBox";
 import Button from "./components/Button";
 import ClearButton from "./components/ClearButton";
+import ReactPaginate from "react-paginate";
 
 const App = () => {
   const [movies, setMovies] = useState([]);
