@@ -7,6 +7,7 @@ const MovieList = (props) => {
     <>
       {props.movies.map((movie, index) => (
         <div className="image-container">
+          <p>{movie.Title}</p>
           <img src={movie.Poster} alt="movie"></img>
         </div>
       ))}

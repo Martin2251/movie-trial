@@ -12,15 +12,18 @@ const App = () => {
   const [searchValue, setSearchValue] = useState("");
   const [pageNumber, setPageNumber] = useState(0);
   // create logic for pagination
-  const moviesPerPage = 10;
+  /*const moviesPerPage = 10;
   const pagesVisited = pageNumber * moviesPerPage;
 
   const displayMovies = movies
     .slice(pagesVisited, pagesVisited + moviesPerPage)
     .map((movies) => {
-      return;
-    });
+      return (
 
+
+      );
+    });
+*/
   // will trigger only ONCE when user lands on the page
 
   useEffect(async () => {
