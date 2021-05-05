@@ -26,9 +26,13 @@ const App = () => {
 
     const response = await fetch(url);
     const responseJson = await response.json();
-
-    // update the state
-    setMovies(responseJson.Search);
+    console.log(responseJson);
+    if (!responseJson.Error) {
+      // update the state
+      setMovies(responseJson.Search);
+    } else {
+      alert(responseJson.Error);
+    }
   };
   const resetAll = () => {
     setMovies([]);
@@ -38,8 +42,10 @@ const App = () => {
     <div>
       <div className="search-cont">
         <MovieListHeading heading=" Martin React Movie API" />
-        <SearchBox value={searchValue} onChange={setSearchValue} />
-        <Button onClickHandler={getMovieRequest} label="Search"></Button>
+        <div className="search-container">
+          <SearchBox value={searchValue} onChange={setSearchValue} />
+          <Button onClickHandler={getMovieRequest} label="Search"></Button>
+        </div>
       </div>
 
       <div className="movie-show">
