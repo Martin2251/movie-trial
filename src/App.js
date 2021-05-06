@@ -5,12 +5,13 @@ import "./App.css";
 import SearchBox from "./components/SearchBox";
 import Button from "./components/Button";
 import ClearButton from "./components/ClearButton";
-import ReactPaginate from "react-paginate";
+import Pagination from "./components/Pagination";
 
 const App = () => {
   const [movies, setMovies] = useState([]);
   const [searchValue, setSearchValue] = useState("");
-  const [pageNumber, setPageNumber] = useState(0);
+  const [moviesPerPage, setMoviesPerPage] = useState(0);
+  const [currentPage, setCurrentPage] = useState(1);
   // create logic for pagination
   /*const moviesPerPage = 10;
   const pagesVisited = pageNumber * moviesPerPage;
@@ -52,6 +53,10 @@ const App = () => {
     setMovies([]);
     setSearchValue("");
   };
+
+  // change page
+  const paginate = (pageNumber) => setCurrentPage(pageNumber);
+
   return (
     /*<div>
       <Router>
@@ -83,6 +88,11 @@ const App = () => {
         <MovieList movies={movies} />
       </div>
       <ClearButton onClickHandler={resetAll} label="Clear All"></ClearButton>
+      <Pagination
+        MoviesPerPage={moviesPerPage}
+        totalMovies={movies.length}
+        paginate={paginate}
+      />
     </div>
   );
 };
