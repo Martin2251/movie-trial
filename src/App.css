@@ -91,6 +91,8 @@ body {
   border-color: #ffff;
   border-style: solid;
   text-align: center;
+  background-color: #888888;
+  text-emphasis-color: black;
 }
 
 .image-container:hover {

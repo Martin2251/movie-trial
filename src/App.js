@@ -53,7 +53,7 @@ const App = () => {
     setSearchValue("");
   };
   return (
-    <div>
+    /*<div>
       <Router>
         <div>
           <Switch>
@@ -68,7 +68,7 @@ const App = () => {
       </Router>
 
     </div>
-
+*/
 
     <div>
       <div className="search-cont">
