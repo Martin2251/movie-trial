@@ -90,6 +90,7 @@ body {
   transition: transform 0.2s;
   border-color: #ffff;
   border-style: solid;
+  text-align: center;
 }
 
 .image-container:hover {

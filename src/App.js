@@ -54,6 +54,23 @@ const App = () => {
   };
   return (
     <div>
+      <Router>
+        <div>
+          <Switch>
+            <Route path='/card/:id'>
+              <Card />
+            </Route>
+            <Route exact path='/'>
+              <Catalog />
+            </Route>
+          </Switch>
+        </div>
+      </Router>
+
+    </div>
+
+
+    <div>
       <div className="search-cont">
         <MovieListHeading heading=" Martin React Movie API" />
         <div className="search-container">
