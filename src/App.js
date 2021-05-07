@@ -6,11 +6,12 @@ import SearchBox from "./components/SearchBox";
 import Button from "./components/Button";
 import ClearButton from "./components/ClearButton";
 import Pagination from "./components/Pagination";
+import Header from "./components/Header";
 
 const App = () => {
   const [movies, setMovies] = useState([]);
   const [searchValue, setSearchValue] = useState("");
-  const [moviesPerPage, setMoviesPerPage] = useState(0);
+  const [moviesPerPage, setMoviesPerPage] = useState(10);
   const [currentPage, setCurrentPage] = useState(1);
   // create logic for pagination
   /*const moviesPerPage = 10;
@@ -55,7 +56,10 @@ const App = () => {
   };
 
   // change page
-  const paginate = (pageNumber) => setCurrentPage(pageNumber);
+  const paginate = (pageNumber) => {
+    setCurrentPage(pageNumber);
+  };
+  //const url = `http://www.omdbapi.com/?s=${searchValue}&apikey=24885019&page=${page}`;
 
   return (
     /*<div>
@@ -78,9 +82,18 @@ const App = () => {
     <div>
       <div className="search-cont">
         <MovieListHeading heading=" Martin React Movie API" />
+        <Header></Header>
         <div className="search-container">
-          <SearchBox value={searchValue} onChange={setSearchValue} />
-          <Button onClickHandler={getMovieRequest} label="Search"></Button>
+          <SearchBox
+            id="search-bar"
+            value={searchValue}
+            onChange={setSearchValue}
+          />
+          <Button
+            className="search-btn"
+            onClickHandler={getMovieRequest}
+            label="Search"
+          ></Button>
         </div>
       </div>
 

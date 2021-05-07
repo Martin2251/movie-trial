@@ -1,11 +1,7 @@
 import React from "react";
 
 const Pagination = ({ MoviesPerPage, totalMovies, paginate }) => {
-  const pageNumbers = [];
-
-  for (let i = 1; i <= Math.ceil(totalMovies / MoviesPerPage); i++) {
-    pageNumbers.push(i);
-  }
+  const pageNumbers = [1, 2, 3];
 
   return (
     <nav>
