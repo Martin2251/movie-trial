@@ -89,12 +89,12 @@ const App = () => {
             value={searchValue}
             onChange={setSearchValue}
           />
-          <Button
-            className="search-btn"
-            onClickHandler={getMovieRequest}
-            label="Search"
-          ></Button>
         </div>
+        <Button
+          className="search-btn"
+          onClickHandler={getMovieRequest}
+          label="Search"
+        ></Button>
       </div>
 
       <div className="movie-show">
