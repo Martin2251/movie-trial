@@ -1,10 +1,9 @@
 import React from "react";
-import "./App,css";
 
 function Nav() {
   return (
     <nav>
-      <ul>
+      <ul className="nav-links">
         <li>Movies</li>
         <li>Contact</li>
       </ul>

@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import MovieList from "./components/MovieList";
 import MovieListHeading from "./components/MovieListHeading";
+import Nav from "./components/Nav";
 import "./App.css";
 import SearchBox from "./components/SearchBox";
 import Button from "./components/Button";
@@ -62,27 +63,12 @@ const App = () => {
   //const url = `http://www.omdbapi.com/?s=${searchValue}&apikey=24885019&page=${page}`;
 
   return (
-    /*<div>
-      <Router>
-        <div>
-          <Switch>
-            <Route path='/card/:id'>
-              <Card />
-            </Route>
-            <Route exact path='/'>
-              <Catalog />
-            </Route>
-          </Switch>
-        </div>
-      </Router>
-
-    </div>
-*/
-
     <div>
+      <Nav />
       <div className="search-cont">
         <MovieListHeading heading=" Martin React Movie API" />
         <Header></Header>
+
         <div className="search-container">
           <SearchBox
             id="search-bar"
