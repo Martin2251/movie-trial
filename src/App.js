@@ -10,8 +10,10 @@ function App() {
     <div>
       <Router>
         <Nav />
-        <Route path="/Contact" component={Contact} />
-        <Route path="/MovieDisplay" component={MovieDisplay} />
+        <Switch>
+          <Route path="/Contact" exact component={Contact} />
+          <Route path="/MovieDisplay" exact component={MovieDisplay} />
+        </Switch>
       </Router>
     </div>
   );
