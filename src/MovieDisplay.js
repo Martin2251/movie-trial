@@ -1,14 +1,12 @@
 import { useState, useEffect } from "react";
 import MovieList from "./components/MovieList";
 import MovieListHeading from "./components/MovieListHeading";
-import Nav from "./components/Nav";
 import "./App.css";
 import SearchBox from "./components/SearchBox";
 import Button from "./components/Button";
 import ClearButton from "./components/ClearButton";
 import Pagination from "./components/Pagination";
 
-import Contact from "./Contact";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 const MovieDisplay = () => {
@@ -16,6 +14,7 @@ const MovieDisplay = () => {
   const [searchValue, setSearchValue] = useState("");
   const [moviesPerPage, setMoviesPerPage] = useState(10);
   const [currentPage, setCurrentPage] = useState(1);
+  const [moreInfo, setMoreInfo] = useState();
   // create logic for pagination
   /*const moviesPerPage = 10;
   const pagesVisited = pageNumber * moviesPerPage;
