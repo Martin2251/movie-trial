@@ -8,6 +8,8 @@ import Button from "./components/Button";
 import ClearButton from "./components/ClearButton";
 import Pagination from "./components/Pagination";
 import Header from "./components/Header";
+import Contact from "./Contact";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 const App = () => {
   const [movies, setMovies] = useState([]);
@@ -64,7 +66,12 @@ const App = () => {
 
   return (
     <div>
-      <Nav />
+      <Router>
+        <Nav />
+        <Route path="/Contact" component={Contact} />
+      </Router>
+
+      <div></div>
       <div className="search-cont">
         <MovieListHeading heading=" Martin React Movie API" />
         <Header></Header>
