@@ -1,11 +1,17 @@
+import { useState, useEffect } from "react";
+import MovieList from "./components/MovieList";
+import MovieListHeading from "./components/MovieListHeading";
 import Nav from "./components/Nav";
 import "./App.css";
+import SearchBox from "./components/SearchBox";
+import Button from "./components/Button";
+import ClearButton from "./components/ClearButton";
+import Pagination from "./components/Pagination";
 import Header from "./components/Header";
 import Contact from "./Contact";
-import MovieDisplay from "./MovieDisplay";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-const App = () => {
+const MovieDisplay = () => {
   const [movies, setMovies] = useState([]);
   const [searchValue, setSearchValue] = useState("");
   const [moviesPerPage, setMoviesPerPage] = useState(10);
@@ -97,4 +103,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default MovieDisplay;
