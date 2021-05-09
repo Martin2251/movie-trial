@@ -18,13 +18,10 @@ const MovieDisplay = () => {
   // create logic for pagination
   /*const moviesPerPage = 10;
   const pagesVisited = pageNumber * moviesPerPage;
-
   const displayMovies = movies
     .slice(pagesVisited, pagesVisited + moviesPerPage)
     .map((movies) => {
       return (
-
-
       );
     });
 */

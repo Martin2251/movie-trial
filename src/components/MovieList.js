@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, Router } from "react-router-dom";
 
 //map over the list of movies with.map and return the poster
 
@@ -10,16 +10,7 @@ const MovieList = (props) => {
         <div className="image-container">
           <p>{movie.Title}</p>
           <img src={movie.Poster} alt="movie"></img>
-          <button className="Movie-button">
-            <Link
-              to={{
-                pathname: `/movie/${movie.movie_id}`,
-                state: { movie: movie.title },
-              }}
-            >
-              View Movie
-            </Link>
-          </button>
+          <button className="Movie-button">View Movie</button>
         </div>
       ))}
     </>
