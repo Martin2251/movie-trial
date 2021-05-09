@@ -11,7 +11,9 @@ const MovieList = (props) => {
         <div className="image-container">
           <p>{movie.Title}</p>
           <img src={movie.Poster} alt="movie"></img>
-          <button className="Movie-button">View Movie </button>
+          <button className="Movie-button">
+            <Link to={{ pathname: `` }}>View Movie</Link>
+          </button>
         </div>
       ))}
     </>
