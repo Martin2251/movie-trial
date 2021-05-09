@@ -11,6 +11,7 @@ const MovieList = (props) => {
         <div className="image-container">
           <p>{movie.Title}</p>
           <img src={movie.Poster} alt="movie"></img>
+          <button className="Movie-button">View Movie </button>
         </div>
       ))}
     </>
