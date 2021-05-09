@@ -12,7 +12,14 @@ const MovieList = (props) => {
           <p>{movie.Title}</p>
           <img src={movie.Poster} alt="movie"></img>
           <button className="Movie-button">
-            <Link to={{ pathname: `/movies` }}>View Movie</Link>
+            <Link
+              to={{
+                pathname: `/movie/${movie.movie_id}`,
+                state: { movie: movie.title },
+              }}
+            >
+              View Movie
+            </Link>
           </button>
         </div>
       ))}
