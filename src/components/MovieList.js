@@ -12,7 +12,7 @@ const MovieList = (props) => {
           <p>{movie.Title}</p>
           <img src={movie.Poster} alt="movie"></img>
           <button className="Movie-button">
-            <Link to={{ pathname: `` }}>View Movie</Link>
+            <Link to={{ pathname: `/movies` }}>View Movie</Link>
           </button>
         </div>
       ))}
