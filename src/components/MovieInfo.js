@@ -4,7 +4,15 @@ class MovieInfo extends React.Component {
   state = {
     activeMovie: [],
   };
-  componentDidMount = () => {};
+  componentDidMount = () => {
+    const getMovieRequest = async () => {
+      const url = `http://www.omdbapi.com/?s=${searchValue}&apikey=24885019`;
+
+      const response = await fetch(url);
+      const responseJson = await response.json();
+      console.log(response.movies);
+    };
+  };
 
   render() {
     console.log(this.props);
