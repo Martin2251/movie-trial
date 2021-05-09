@@ -11,7 +11,9 @@ import MovieDisplay from "./MovieDisplay";
 function App() {
   return (
     <Router>
-      <MovieDisplay></MovieDisplay>
+      <div>
+        <MovieDisplay></MovieDisplay>
+      </div>
     </Router>
   );
 }
