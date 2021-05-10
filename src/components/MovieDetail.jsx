@@ -1,16 +1,21 @@
 import React, { useState, useEffect } from "react";
-import "./App.css";
+
+import { Link } from "react-router-dom";
 
 function MovieDetail() {
-  useEffect(() => {}, []);
+  useEffect(() => {
+    fetchMovie();
+  }, []);
 
   const [movie, setMovie] = useState({});
 
   const fetchMovie = async () => {
     const fetchMovie = await fetch(
-      `http://www.omdbapi.com/?s=${searchValue}&apikey=24885019`
+      `http://www.omdbapi.com/?s=godfather&apikey=24885019"`
     );
     const movie = await fetchMovie.json();
+
+    console.log(movie);
   };
   return (
     <div>

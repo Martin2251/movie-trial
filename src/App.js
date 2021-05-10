@@ -7,14 +7,15 @@ import Button from "./components/Button";
 import ClearButton from "./components/ClearButton";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import MovieDisplay from "./MovieDisplay";
+import MovieDetail from "./components/MovieDetail";
 
 function App() {
   return (
     <Router>
       <div>
-        <MovieDisplay></MovieDisplay>
         <Switch>
-          <Route path="/movies/:Title"></Route>
+          <MovieDisplay></MovieDisplay>
+          <Route path="/MovieDisplay/:Title" component={MovieDetail}></Route>
         </Switch>
       </div>
     </Router>
