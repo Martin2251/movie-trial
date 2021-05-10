@@ -13,6 +13,9 @@ function App() {
     <Router>
       <div>
         <MovieDisplay></MovieDisplay>
+        <Switch>
+          <Route path="/movies/:id"></Route>
+        </Switch>
       </div>
     </Router>
   );
