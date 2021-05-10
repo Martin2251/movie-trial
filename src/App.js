@@ -14,7 +14,7 @@ function App() {
       <div>
         <MovieDisplay></MovieDisplay>
         <Switch>
-          <Route path="/movies/:id"></Route>
+          <Route path="/movies/:Title"></Route>
         </Switch>
       </div>
     </Router>
