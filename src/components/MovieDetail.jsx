@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 
 import { Link } from "react-router-dom";
 
+//match?
 function MovieDetail() {
   useEffect(() => {
     fetchMovie();
@@ -11,11 +12,9 @@ function MovieDetail() {
 
   const fetchMovie = async () => {
     const fetchMovie = await fetch(
-      `http://www.omdbapi.com/?s=godfather&apikey=24885019"`
+      `http://www.omdbapi.com/?s=godfather&apikey=24885019`
     );
     const movie = await fetchMovie.json();
-
-    console.log(movie);
   };
   return (
     <div>

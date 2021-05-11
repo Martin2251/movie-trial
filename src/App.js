@@ -8,14 +8,19 @@ import ClearButton from "./components/ClearButton";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import MovieDisplay from "./MovieDisplay";
 import MovieDetail from "./components/MovieDetail";
+import Nav from "./components/Nav";
+import Contact from "./Contact";
 
 function App() {
   return (
     <Router>
       <div>
         <Switch>
-          <MovieDisplay></MovieDisplay>
-          <Route path="/MovieDisplay/:Title" component={MovieDetail}></Route>
+          <MovieDisplay />
+          <Route
+            path="./components/MovieDetail/:TitleMovieDetail/:Title"
+            component={MovieDetail}
+          ></Route>
         </Switch>
       </div>
     </Router>

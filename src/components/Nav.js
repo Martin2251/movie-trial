@@ -5,11 +5,11 @@ function Nav() {
   return (
     <nav>
       <ul className="nav-links">
-        <Link to="/MovieDisplay">
-          <li>MovieDisplay</li>
-        </Link>
         <Link to="/Contact">
           <li>Contact</li>
+        </Link>
+        <Link to="/MovieDisplay">
+          <li>Movies</li>
         </Link>
       </ul>
     </nav>
