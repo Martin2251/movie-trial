@@ -45,8 +45,9 @@ body {
   font-weight: 900;
   font-size: 12px;
   box-shadow: 3em;
-  align-items: right;
+  display: flex;
   margin-left: 7.5%;
+  flex-direction: row;
 }
 
 .button:hover {
@@ -115,6 +116,10 @@ body {
   text-align: center;
   background-color: #888888;
   text-emphasis-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 30%;
 }
 
 .image-container:hover {

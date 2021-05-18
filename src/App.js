@@ -16,11 +16,9 @@ function App() {
     <Router>
       <div>
         <Switch>
-          <MovieDisplay />
-          <Route
-            path="./components/MovieDetail/:TitleMovieDetail/:Title"
-            component={MovieDetail}
-          ></Route>
+          <MovieDisplay></MovieDisplay>
+          <Route path="./MovieDisplay" component={MovieDisplay} />
+          <Route path="./MovieDisplay/:Movie" component={MovieDetail}></Route>
         </Switch>
       </div>
     </Router>

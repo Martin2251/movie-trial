@@ -12,19 +12,15 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 const MovieDisplay = () => {
   const [movies, setMovies] = useState([]);
   const [searchValue, setSearchValue] = useState("");
-  const [moviesPerPage, setMoviesPerPage] = useState(10);
+  const [moviesPerPage, setMoviesPerPage] = useState(3);
   const [currentPage, setCurrentPage] = useState(1);
   const [moreInfo, setMoreInfo] = useState();
+
   // create logic for pagination
-  /*const moviesPerPage = 10;
-  const pagesVisited = pageNumber * moviesPerPage;
-  const displayMovies = movies
-    .slice(pagesVisited, pagesVisited + moviesPerPage)
-    .map((movies) => {
-      return (
-      );
-    });
-*/
+  const indexOfLastMovie = currentPage * moviesPerPage;
+  const indexOfFirstMovie = indexOfLastMovie - moviesPerPage;
+  const currentMovies = movies.slice(indexOfFirstMovie, indexOfLastMovie);
+
   // will trigger only ONCE when user lands on the page
 
   useEffect(async () => {
@@ -81,7 +77,7 @@ const MovieDisplay = () => {
       </div>
 
       <div className="movie-show">
-        <MovieList movies={movies} />
+        <MovieList movies={currentMovies} />
       </div>
       <ClearButton onClickHandler={resetAll} label="Clear All"></ClearButton>
       <Pagination
