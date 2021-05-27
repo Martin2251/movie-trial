@@ -10,7 +10,7 @@ import Pagination from "./components/Pagination";
 const MovieDisplay = () => {
   const [movies, setMovies] = useState([]);
   const [searchValue, setSearchValue] = useState("");
-  const [moviesPerPage, setMoviesPerPage] = useState(3);
+  const [moviesPerPage, setMoviesPerPage] = useState(5);
   const [currentPage, setCurrentPage] = useState(1);
   const [moreInfo, setMoreInfo] = useState();
 
