@@ -7,12 +7,10 @@ import Button from "./components/Button";
 import ClearButton from "./components/ClearButton";
 import Pagination from "./components/Pagination";
 
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-
 const MovieDisplay = () => {
   const [movies, setMovies] = useState([]);
   const [searchValue, setSearchValue] = useState("");
-  const [moviesPerPage] = useState(5);
+  const [moviesPerPage, setMoviesPerPage] = useState(3);
   const [currentPage, setCurrentPage] = useState(1);
   const [moreInfo, setMoreInfo] = useState();
 
@@ -81,7 +79,7 @@ const MovieDisplay = () => {
       </div>
       <ClearButton onClickHandler={resetAll} label="Clear All"></ClearButton>
       <Pagination
-        moviesPerPage={moviesPerPage}
+        MoviesPerPage={moviesPerPage}
         totalMovies={movies.length}
         paginate={paginate}
       />
