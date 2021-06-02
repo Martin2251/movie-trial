@@ -10,7 +10,6 @@ function MovieList(props) {
         <Link to={`/movieDetail/${movie.imdbID}`}>
           <div className="image-container">
             <p>{movie.Title}</p>
-            <p>{movie.Description}</p>
             <img src={movie.Poster} alt="movie"></img>
           </div>
         </Link>

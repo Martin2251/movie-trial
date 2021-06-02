@@ -21,8 +21,19 @@ function MovieDetail(props) {
     //as it reads from the api.
 
     <div className="card">
-      <h4>Movie Name:{movieInfo.Title}</h4>
-      <p>Year{movieInfo.Year}</p>
+      <div className="movie-poster">
+        <img src={movieInfo.Poster}></img>
+        />
+      </div>
+      <h4>Movie Name {movieInfo.Title}</h4>
+      <p>{movieInfo.Plot}</p>
+      <p>Actors {movieInfo.Actors}</p>
+      <p>Year {movieInfo.Year}</p>
+      <p>Country {movieInfo.Country}</p>
+      <p>
+        <span>Generes </span>
+        {movieInfo.Genre}
+      </p>
     </div>
   );
 }
