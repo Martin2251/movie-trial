@@ -82,7 +82,7 @@ const MovieDisplay = () => {
         MoviesPerPage={moviesPerPage}
         totalMovies={movies.length}
         paginate={paginate}
-      />
+      ></Pagination>
     </div>
   );
 };

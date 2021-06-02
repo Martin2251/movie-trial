@@ -2,13 +2,13 @@ import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, useParams } from "react-router-dom";
 
 //match?
-function MovieDetail() {
-  let { id } = useParams();
+function MovieDetail(props) {
+  let { movieId } = useParams();
 
   const [movieInfo, setMovieInfo] = useState({});
 
   useEffect(function () {
-    fetch(`http://www.omdbapi.com/&apikey=24885019/` + id)
+    fetch(`http://www.omdbapi.com/?apikey=24885019&i=${movieId}`)
       .then(function (response) {
         return response.json();
       })
@@ -21,7 +21,7 @@ function MovieDetail() {
     //as it reads from the api.
 
     <div className="card">
-      <h4>Movie Name: {movieInfo.Title}</h4>
+      <h4>Movie Name:{movieInfo.Title}</h4>
       <p>Year{movieInfo.Year}</p>
     </div>
   );

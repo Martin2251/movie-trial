@@ -12,14 +12,12 @@ import MovieDetail from "./components/MovieDetail";
 function App() {
   return (
     <Router>
-      <Route>
-        <Switch>
-          <Route path="/movieDetail/:id">
-            <MovieDetail></MovieDetail>
-          </Route>
+      <Switch>
+        <Route exact path="/movieDetail/:movieId" component={MovieDetail} />
+        <Route path="/">
           <MovieDisplay></MovieDisplay>
-        </Switch>
-      </Route>
+        </Route>
+      </Switch>
     </Router>
   );
 }
