@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "../styles/MovieList.css";
 
 //map over the list of movies with.map and return the poster
 

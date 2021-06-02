@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, useParams } from "react-router-dom";
-
+import "../styles/MovieDetail.css";
 //match?
 function MovieDetail(props) {
   let { movieId } = useParams();
@@ -20,20 +20,34 @@ function MovieDetail(props) {
   return (
     //as it reads from the api.
 
-    <div className="card">
+    <div className="Movie">
       <div className="movie-poster">
-        <img src={movieInfo.Poster}></img>
-        />
+        <img src={movieInfo.Poster} alt="movie"></img>
       </div>
-      <h4>Movie Name {movieInfo.Title}</h4>
-      <p>{movieInfo.Plot}</p>
-      <p>Actors {movieInfo.Actors}</p>
-      <p>Year {movieInfo.Year}</p>
-      <p>Country {movieInfo.Country}</p>
-      <p>
-        <span>Generes </span>
-        {movieInfo.Genre}
-      </p>
+      <div className="movie-text">
+        <h4>{movieInfo.Title}</h4>
+        <p>{movieInfo.Plot}</p>
+        <p>
+          <span>Actors </span>
+          {movieInfo.Actors}
+        </p>
+        <p>
+          <span>Year </span>
+          {movieInfo.Year}
+        </p>
+        <p>
+          <span>Country </span>
+          {movieInfo.Country}
+        </p>
+        <p>
+          <span>Genre</span>
+          {movieInfo.Genre}
+        </p>
+        <p>
+          <span>Rating </span>
+          {movieInfo.imdbRating}
+        </p>
+      </div>
     </div>
   );
 }
