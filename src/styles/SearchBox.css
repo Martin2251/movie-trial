@@ -1,0 +1,23 @@
+#search-bar {
+  border-radius: 0px;
+  display: block;
+  width: 70%;
+  border: solid hsl(28, 79%, 51%) 2px;
+  height: 50px;
+  margin-top: 0px;
+  font-size: larger;
+  cursor: pointer;
+}
+.search-area {
+  display: flex;
+  width: 90%;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-form {
+  display: flex;
+  width: 90%;
+  align-items: center;
+  justify-content: center;
+}

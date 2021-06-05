@@ -76,14 +76,7 @@ body {
   cursor: pointer;
 }
 
-.search-form {
-  flex: 1;
-  display: flex;
-  padding: 5px 4px 0 16px;
-  padding-left: 14px;
-  border-radius: 15px;
-
-  /*
+/*
   display: inline-block;
   flex-direction: column;
   justify-content: flex-start;
@@ -94,7 +87,6 @@ body {
   width: 45px;
   border-radius: 100px;
   */
-}
 
 .search-bar {
   border-radius: 15px;
