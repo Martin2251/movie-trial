@@ -8,12 +8,13 @@ function MovieList(props) {
   return (
     <>
       {props.movies.map((movie, index) => (
-        <Link to={`/movieDetail/${movie.imdbID}`}>
-          <div className="image-container">
-            <p>{movie.Title}</p>
-            <img src={movie.Poster} alt="movie"></img>
-          </div>
-        </Link>
+        <div className="image-container">
+          <p>{movie.Title}</p>
+          <img src={movie.Poster} alt="movie"></img>
+          <Link to={`/movieDetail/${movie.imdbID}`}>
+            <button className="more-info">See more info</button>
+          </Link>
+        </div>
       ))}
     </>
   );

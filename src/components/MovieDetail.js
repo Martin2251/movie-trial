@@ -40,7 +40,7 @@ function MovieDetail(props) {
           {movieInfo.Country}
         </p>
         <p>
-          <span>Genre</span>
+          <span>Genre </span>
           {movieInfo.Genre}
         </p>
         <p>
@@ -50,6 +50,10 @@ function MovieDetail(props) {
         <p>
           <span>Run-time </span>
           {movieInfo.Runtime}
+        </p>
+        <p>
+          <span>Director </span>
+          {movieInfo.Director}
         </p>
       </div>
     </div>

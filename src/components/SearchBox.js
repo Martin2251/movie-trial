@@ -1,5 +1,7 @@
 import React from "react";
+import SearchIcon from "@material-ui/icons/Search";
 
+const Form = () => {};
 const SearchBox = (props) => {
   const styling = {
     width: "20rem",
@@ -15,6 +17,10 @@ const SearchBox = (props) => {
         onChange={(event) => props.onChange(event.target.value)}
         placeholder="Type to search..."
       ></input>
+      <button type="submit">
+        <SearchIcon />
+        onClick={props.onClickHandler}
+      </button>
     </div>
   );
 };
