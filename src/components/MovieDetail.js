@@ -47,6 +47,10 @@ function MovieDetail(props) {
           <span>Rating </span>
           {movieInfo.imdbRating}
         </p>
+        <p>
+          <span>Run-time </span>
+          {movieInfo.Runtime}
+        </p>
       </div>
     </div>
   );
