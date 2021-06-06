@@ -6,6 +6,7 @@ import SearchBox from "./components/SearchBox";
 import Button from "./components/Button";
 import ClearButton from "./components/ClearButton";
 import Pagination from "./components/Pagination";
+import SearchButton from "./components/SearchButton";
 
 const MovieDisplay = () => {
   const [movies, setMovies] = useState([]);
@@ -56,7 +57,6 @@ const MovieDisplay = () => {
 
   return (
     <div>
-      <div></div>
       <div className="search-cont">
         <MovieListHeading heading=" Martin React Movie API" />
 
@@ -66,12 +66,13 @@ const MovieDisplay = () => {
             value={searchValue}
             onChange={setSearchValue}
           />
+
+          <SearchButton
+            className="search-btn"
+            onClickHandler={getMovieRequest}
+            label="Search"
+          ></SearchButton>
         </div>
-        <Button
-          className="search-btn"
-          onClickHandler={getMovieRequest}
-          label="Search"
-        ></Button>
       </div>
 
       <div className="movie-show">
