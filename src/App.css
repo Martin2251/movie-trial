@@ -31,29 +31,14 @@ body {
   align-items: center;
   justify-content: center;
 }
-.search-btn {
-  height: 50px;
-  border-radius: 5px;
-  font-size: 20px;
-  border: solid hsl(337, 92%, 62%) 1px;
-  color: white;
-  background-color: #f52878;
-  cursor: pointer;
-  padding: 5px;
-  padding-left: 10px;
-  padding-right: 10px;
-  margin-top: 0px;
-  margin-bottom: 0px;
-  width: 200px;
-  margin-left: 20px;
-}
 
 .search-btn:hover {
   background-color: #e90b62;
 }
 .button {
   background-color: #e67e22;
-  display: inline-block;
+  display: flex;
+  align-items: flex-end;
   color: white;
   padding: 10px 24px;
   text-align: right;
@@ -65,7 +50,6 @@ body {
   box-shadow: 3em;
   display: flex;
   margin-left: 7.5%;
-  flex-direction: row;
 }
 
 .button:hover {

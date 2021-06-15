@@ -3,7 +3,6 @@ import MovieList from "./components/MovieList";
 import MovieListHeading from "./components/MovieListHeading";
 import "./App.css";
 import SearchBox from "./components/SearchBox";
-import Button from "./components/Button";
 import ClearButton from "./components/ClearButton";
 import Pagination from "./components/Pagination";
 import SearchButton from "./components/SearchButton";
@@ -13,7 +12,6 @@ const MovieDisplay = () => {
   const [searchValue, setSearchValue] = useState("");
   const [moviesPerPage, setMoviesPerPage] = useState(5);
   const [currentPage, setCurrentPage] = useState(1);
-  const [moreInfo, setMoreInfo] = useState();
 
   // create logic for pagination
   const indexOfLastMovie = currentPage * moviesPerPage;
