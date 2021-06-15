@@ -12,6 +12,7 @@ const MovieDisplay = () => {
   const [searchValue, setSearchValue] = useState("");
   const [moviesPerPage, setMoviesPerPage] = useState(5);
   const [currentPage, setCurrentPage] = useState(1);
+  const [moreInfo, setMoreInfo] = useState();
 
   // create logic for pagination
   const indexOfLastMovie = currentPage * moviesPerPage;

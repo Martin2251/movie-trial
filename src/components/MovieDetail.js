@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { BrowserRouter as useParams } from "react-router-dom";
+import { BrowserRouter as Router, useParams } from "react-router-dom";
 import "../styles/MovieDetail.css";
 //match?
 function MovieDetail(props) {
