@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { BrowserRouter as Router, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
+import styled from "styled-components";
 import "../styles/MovieDetail.css";
 //match?
 function MovieDetail(props) {
@@ -55,9 +57,18 @@ function MovieDetail(props) {
           <span>Director </span>
           {movieInfo.Director}
         </p>
+        <div className="btn-place">
+          <Link to={"/"}>
+            <Btn className="btn">Back to home</Btn>
+          </Link>
+        </div>
       </div>
     </div>
   );
 }
 
 export default MovieDetail;
+
+const Btn = styled.button`
+  font-size: 1rem;
+`;
